@@ -173,9 +173,11 @@ def simcompfunc():
     print('Simulation Completed!')
    
 #Customer Simulation    
-def simfunc(dummypara1, dummypara2, dummypara3, dummypara4):
-    simcf = dummypara1
-    simdf = dummypara2
+def simfunc():
+    simcf = random.randint(bf,nf)
+    simdf = random.randint(bf,nf)
+    while simdf!=simcf:
+        simdf = random.randint(bf,nf)
     simdistlst = []
     for i in range(ne):
         elevator[i].elecurpos = random.choice(elevator[i].elesflst)
